@@ -1,0 +1,186 @@
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8faf9;
+    color: #444;
+    margin: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container-custom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.header-principal {
+    height: 60vh;
+    min-height: 400px;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('https://i.pinimg.com/1200x/b1/c2/71/b1c271f8b4623c2f645fe65387f60b77.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: clamp(2.5rem, 8vw, 5rem); 
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0;
+}
+
+.navbar-custom {
+    background: #ffffff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.logo i { color: #8ebf42; font-size: 2rem; }
+
+.menu-links {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-links a {
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.menu-links a:hover { color: #8ebf42; }
+
+
+.section-title {
+    margin: 60px 0 40px;
+    text-align: center;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+}
+
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.caja-servicio {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.caja-servicio:hover {
+    transform: translateY(-10px);
+}
+
+.caja-servicio img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; 
+}
+
+.caja-servicio h3 {
+    padding: 20px 15px 10px;
+    color: #8ebf42;
+    text-align: center;
+    margin: 0;
+}
+
+.caja-servicio p {
+    padding: 0 20px 30px;
+    color: #777;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 100px;
+}
+
+.test-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.test-card i { font-size: 2.5rem; color: #8ebf42; margin-bottom: 15px; }
+
+.estrellas { 
+    color: #f1c40f; 
+    margin: 15px 0; 
+    font-size: 1.2rem;
+}
+
+.test-card h4 {
+    margin: 0;
+    font-weight: bold;
+    color: #333;
+}
+
+
+.footer {
+    background: #2c3e50;
+    color: white;
+    padding: 60px 0;
+}
+
+
+@media (max-width: 768px) {
+    .nav-wrapper {
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header-principal {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .container-custom {
+        padding: 0 15px;
+    }
+}
